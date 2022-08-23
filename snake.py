@@ -17,13 +17,13 @@ class Snake:
             del self.body[-1]
         # TODO: cant move into body stoopid
         if self.direction == 'right':
-            self.head[0] += 5 if self.head[0] < (self.screen_size/self.scale)-self.scale else -(self.screen_size/self.scale)+self.scale
+            self.head[0] += self.scale if self.head[0] < (self.screen_size/self.scale)-self.scale else -(self.screen_size/self.scale)+self.scale
         elif self.direction == 'left':
-            self.head[0] -= 5 if self.head[0] > 0 else -(self.screen_size/self.scale)+self.scale
+            self.head[0] -= self.scale if self.head[0] > 0 else -(self.screen_size/self.scale)+self.scale
         elif self.direction == 'up':
-            self.head[1] -= 5 if self.head[1] > 0 else -(self.screen_size/self.scale)+self.scale
+            self.head[1] -= self.scale if self.head[1] > 0 else -(self.screen_size/self.scale)+self.scale
         elif self.direction == 'down':
-            self.head[1] += 5 if self.head[1] < (self.screen_size/self.scale)-self.scale else -(self.screen_size/self.scale)+self.scale
+            self.head[1] += self.scale if self.head[1] < (self.screen_size/self.scale)-self.scale else -(self.screen_size/self.scale)+self.scale
             
         
     def turn(self, direction: str) -> None:
