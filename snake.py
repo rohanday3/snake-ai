@@ -15,7 +15,6 @@ class Snake:
         self.body.insert(0, self.head[::])
         if len(self.body) > self.length:
             del self.body[-1]
-        # TODO: cant move into body stoopid
         if self.direction == 'right':
             self.head[0] += self.scale if self.head[0] < (self.screen_size/self.scale)-self.scale else -(self.screen_size/self.scale)+self.scale
         elif self.direction == 'left':
